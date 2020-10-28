@@ -64,6 +64,14 @@ app.get('*', (req,res) => {
 
 })
 
+app.post('*', (req,res) => {
+
+    res.status(404).send({
+        message: 'Route not found'
+    });
+
+})
+
 app.listen(port, (err) => {
 
     if(err){
